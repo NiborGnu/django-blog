@@ -29,7 +29,10 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost:8000', 'localhost', '.herokuapp.com']
+ALLOWED_HOSTS = [
+    'localhost:8000', 'localhost', 
+    '.herokuapp.com'
+]
 
 
 # Application definition
@@ -84,6 +87,7 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
